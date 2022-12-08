@@ -1,1 +1,1 @@
-# backend-sdk-example-nodejs
+# Example of Tweed backend NodeJS SDK 
