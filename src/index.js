@@ -9,9 +9,9 @@ const authenticatedUser = {
 
 const start = async () => {
   const sdk = await TweedBackendSDK.setup({
-    apiKey: "YOUR_API_KEY",
-    apiSecret: "YOUR_API_SECRET",
-    environment: Environment.production,
+    apiKey: "P4hYqDPZlxnIles1a2urCmGJfFroPd08",
+    apiSecret: "Qe3YJUXpSItZbvSOY88HH6zT3DNIrEkXIjLS5q5YCTJbHFBw5VRfhioNR7tuK6Vc",
+    environment: Environment.staging,
   });
 
   const app = express();

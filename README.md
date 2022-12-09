@@ -3,6 +3,7 @@
 To launch example:
 
 - Put your API key and secret into `src/index.js`
+- Run `npm install`
 - Run `npm start`
 - Run [frontend example](https://github.com/paytweed/frontend-sdk-react-example)
 
