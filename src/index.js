@@ -11,12 +11,16 @@ const start = async () => {
   const sdk = await TweedBackendSDK.setup({
     apiKey: "YOUR_API_KEY",
     apiSecret: "YOUR_API_SECRET",
-    environment: Environment.production
+    environment: Environment.demo,
   });
 
   const app = express();
   app.use(cors());
   app.use(express.json());
+
+  app.get("/user", async (res) => {
+    res.send(authenticatedUser);
+  });
 
   app.post("/message", async (req, res) => {
     const answer = await sdk.handleMessageFromFrontend(
