@@ -11,7 +11,7 @@ const start = async () => {
   const sdk = await TweedBackendSDK.setup({
     apiKey: "YOUR_API_KEY",
     apiSecret: "YOUR_API_SECRET",
-    environment: Environment.demo,
+    defaultBlockchainIds: ["tezosGhost", "polygonMumbai", "ethereumGoerli"],
   });
 
   const app = express();
