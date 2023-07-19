@@ -1,42 +1,33 @@
 const cors = require('cors');
 const express = require('express');
-const { Environment, TweedBackendSDK } = require('@paytweed/backend-sdk');
+const  tweedService = require("./tweed.service")
+const authService = require("./auth.service")
 
-const authenticatedUser = {
-  email: 'test@example.com',
-  id: '22',
-};
+const DEFAULT_PORT = 3010
 
-const start = async () => {
-  const sdk = await TweedBackendSDK.setup({
-    apiKey: 'YOUR_API_KEY',
-    apiSecret: 'YOUR_API_SECRET',
-    defaultBlockchainIds: ['tezosGhost', 'polygonMumbai', 'ethereumGoerli'],
-    callbacks: {
-      getNftPurchaseData: async ({ nftId }) => ({
-        nftId,
-        priceInCents: 100,
-        fiatCurrencyId: 'USD',
-        tokenUri: 'NFT_TOKEN_URI',
-        contractAddress: 'CONTRACT_ADDRESS',
-        chain: 'polygonMumbai',
-        title: 'NFT_TITLE',
-        description: 'NFT_DESCRIPTION',
-        abi: 'mint(address,string)',
-      }),
-    },
-  });
 
+const main = async () => {
   const app = express();
   app.use(cors());
   app.use(express.json());
 
-  app.get('/user', async (res) => {
-    res.send(authenticatedUser);
+  const tweedClient = await tweedService.initialize()
+
+  app.get('/user', async (req, res) => {
+    const authUser = authService.getAuthUser()
+    res.send(authUser);
   });
 
+  app.post("/user", async (req, res) => {
+    const id = req.body.id
+    const email = req.body.email
+    const updatedUser = authService.updateUser({id, email})
+    res.send(updatedUser)
+  })
+
   app.post('/message', async (req, res) => {
-    const answer = await sdk.handleMessageFromFrontend(
+    const authenticatedUser = authService.getAuthUser()
+    const answer = await tweedClient.handleMessageFromFrontend(
       req.body.message,
       authenticatedUser.id,
       authenticatedUser.email
@@ -44,8 +35,7 @@ const start = async () => {
     res.send({ answer });
   });
 
-  const port = 3010;
-  app.listen(port, () => console.log(`App is listening on port ${port}`));
+  app.listen(DEFAULT_PORT, () => console.log(`App is listening on port ${DEFAULT_PORT}`));
 };
 
-start();
+main();
