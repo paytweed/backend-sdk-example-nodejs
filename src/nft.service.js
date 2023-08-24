@@ -10,16 +10,16 @@ class NftService {
 
     getById(id) {
         return {
-            nftId: id,
-            priceInCents: this._getNftPrice(),
-            fiatCurrencyId: 'USD',
-            tokenUri: 'NFT_TOKEN_URI',
-            contractAddress: '0x80BB55333968136cda2Ed28f2D63B74D521CAA73',
-            chain: 'ethereumGoerli',
-            title: 'NFT_TITLE',
-            description: 'NFT_DESCRIPTION',
-            abi: 'mint(address,string)',
-        }
+          nftId: id,
+          priceInCents: this._getNftPrice(),
+          fiatCurrencyId: "USD",
+          tokenUri: "NFT_TOKEN_URI",
+          contractAddress: "0x80BB55333968136cda2Ed28f2D63B74D521CAA73",
+          chain: "ethereumGoerli",
+          title: "NFT_TITLE",
+          description: "NFT_DESCRIPTION",
+          abi: "mint(toAddress address, tokenUri string)",
+        };
 
     }
 }
