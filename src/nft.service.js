@@ -17,6 +17,7 @@ class NftService {
        **/
     getById(id) {
         return {
+
             nftId: id,
             priceInCents: this._getNftPrice(),
             tokenUri: 'https://tweed-demo.web.app/tweedNft.png',
@@ -25,6 +26,7 @@ class NftService {
             chain: 'ethereumSepolia',
             title: 'NFT_TITLE',
             description: 'NFT_DESCRIPTION',
+            // abi: "mint(toAddress address, tokenUri string)", //you have the option to use function signature of ABI or the longer version below
             abi: [
               {
                 inputs: [
@@ -57,7 +59,6 @@ class NftService {
             }
             
         }
-
     }
 }
 
