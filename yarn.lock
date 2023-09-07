@@ -7,22 +7,22 @@
   resolved "https://registry.npmjs.org/@graphql-typed-document-node/core/-/core-3.2.0.tgz"
   integrity sha512-mB9oAsNCm9aM3/SOv4YtBMqZbYj10R7dkq8byBqxGY/ncFwhf2oQzMV+LCRlWoDSEBJ3COiR1yeDvMtsoOsuFQ==
 
-"@paytweed/backend-sdk@1.0.1-beta.0":
-  version "1.0.1-beta.0"
-  resolved "https://registry.npmjs.org/@paytweed/backend-sdk/-/backend-sdk-1.0.1-beta.0.tgz"
-  integrity sha512-mkfMhge0rIWfxGmkAyXjUBB5N62F2h9yZ7FFphLygue3l4YhOkG2NoJOHSdLXp7pTvub5JUHmGZkRn3eGpxc+w==
+"@paytweed/backend-sdk@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/@paytweed/backend-sdk/-/backend-sdk-1.0.4.tgz"
+  integrity sha512-S65ggr/OrqHxOwIsazWEzallnh6ARLta3fbtHGZWg+wEjozgTeK3v316SHTIefwumFXd2Y8zpb+OxjuHGU1hhA==
   dependencies:
-    "@paytweed/shared-sdk" "1.0.1-beta.0"
+    "@paytweed/shared-sdk" "1.0.4"
     auth0 "3.3.0"
     graphql "16.6.0"
     graphql-request "5.1.0"
     graphql-tag "2.12.6"
     path "0.12.7"
 
-"@paytweed/shared-sdk@1.0.1-beta.0":
-  version "1.0.1-beta.0"
-  resolved "https://registry.npmjs.org/@paytweed/shared-sdk/-/shared-sdk-1.0.1-beta.0.tgz"
-  integrity sha512-+IKYRwc+6uH3V4E1tQzjNFCxVkSOBQ4HaVm/4G1MnnPokCtptrMvmp2rvRvrGniDKFaLg/Tpu4mj7gEdh7MYEQ==
+"@paytweed/shared-sdk@1.0.4":
+  version "1.0.4"
+  resolved "https://registry.npmjs.org/@paytweed/shared-sdk/-/shared-sdk-1.0.4.tgz"
+  integrity sha512-7++uCeVDag56YhMGfxDyCiwhMJGqpcT1szBAkCvIvQ42yj2q0oXw1tg1CsDiyNZEg/T4uOQWm76ceTYQqxzVJA==
   dependencies:
     buffer "6.0.3"
 
