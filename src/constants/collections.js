@@ -47,6 +47,14 @@ const collectionsData = {
     contractAddress: "0x409975a38AEc7f7d5D43d1d46654d3215c8A2D0F",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
+  bnb: {
+    contractAddress: "0x6C3E3f4090755629e04F13d69d8A600660DeB854",
+    abi: "safeMint(toAddress address, tokenUri string)",
+  },
+  bnbTestnet: {
+    contractAddress: "0x48CE5586f43Bb83206d289E9d44e2F72e8f23B61",
+    abi: "safeMint(toAddress address, tokenUri string)",
+  },
 };
 
 module.exports = collectionsData;
