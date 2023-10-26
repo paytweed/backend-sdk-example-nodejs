@@ -1,4 +1,4 @@
-const collectionsData = require("./constants/abi.js");
+const collectionsData = require("./constants/collections")
 
 class NftService {
   constructor(blockchainId = "ethereumSepolia") {
