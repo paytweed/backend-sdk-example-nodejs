@@ -8,7 +8,7 @@ const collectionsData = {
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   fantomTestnet: {
-    contractAddress: "0x1A24Cd3736a5B5431749Cd2Dc20dfa10f8C92B08",
+    contractAddress: "0x48CE5586f43Bb83206d289E9d44e2F72e8f23B61",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   avalancheFujiCChain: {
@@ -16,11 +16,11 @@ const collectionsData = {
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   avalancheCChain: {
-    contractAddress: "0x409975a38AEc7f7d5D43d1d46654d3215c8A2D0F",
+    contractAddress: "0xCA21fC3303058c97FfD5b655600EC78fA58a610e",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   fantom: {
-    contractAddress: "0x1A24Cd3736a5B5431749Cd2Dc20dfa10f8C92B08",
+    contractAddress: "0xF66e7757c2235C81eACff583bC6417932998a53A",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   tezosGhost: {
@@ -33,7 +33,7 @@ const collectionsData = {
   },
   polygon: {
     contractAddress: "0x90FCAb7b307128CEB4a678BDb5240F4bcF950875",
-    abi: "mint(address,string)",
+    abi: "mint(toAddress address, tokenUri string)",
   },
   arbitrum: {
     contractAddress: "0x4751Cd56231D4A92B607E779FD47802D3f771CAC",
@@ -52,6 +52,14 @@ const collectionsData = {
     abi: "safeMint(toAddress address, tokenUri string)",
   },
   bnbTestnet: {
+    contractAddress: "0x48CE5586f43Bb83206d289E9d44e2F72e8f23B61",
+    abi: "safeMint(toAddress address, tokenUri string)",
+  },
+  beam: {
+    contractAddress: "0xe74ea4e8E7F9e4e5c41B31746174b4E561f28486",
+    abi: "safeMint(toAddress address, tokenUri string)",
+  },
+  beamTestnet: {
     contractAddress: "0x48CE5586f43Bb83206d289E9d44e2F72e8f23B61",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
