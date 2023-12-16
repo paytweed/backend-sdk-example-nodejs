@@ -1,7 +1,7 @@
 const collectionsData = require("./constants/collections")
 
 class NftService {
-  constructor(blockchainId = "ethereumSepolia") {
+  constructor(blockchainId = "bnbTestnet") {
     this.blockchainId = blockchainId;
   }
 
@@ -24,23 +24,42 @@ class NftService {
    * The params should be populated in the customMintParams object
    * There are two parameters that are getting populated from the frontend: toAddress and tokenURI
    **/
-  getById(id) {
+  getTokenById(id) {
+    console.log("Getting token by ID");
     return {
-      nftId: id,
-      priceInCents: this._getNftPrice(),
-      tokenUri: "https://tweed-demo.web.app/tweedNft.png",
+      tokenId: "1",
+      priceInCrypto: 40000000000000,
+      thumbnailPath: "https://tweed-demo.web.app/tweedNft.png",
       fiatCurrencyId: "USD",
-      contractAddress: collectionsData[this.blockchainId].contractAddress,
-      chain: this.blockchainId,
+      contractAddress: "0x9C574b99f2C13acEf98F3af329767eE16F18eC4F",
+      chain: "bnbTestnet",
       title: "NFT_TITLE",
       description: "NFT_DESCRIPTION",
-      // abi: "mint(toAddress address, tokenUri string)", //you have the option to use function signature of ABI or the longer version below
-      abi: collectionsData[this.blockchainId].abi,
+      abi: "TweedBuyTokensFor(toAddress address, amount uint256",
       customMintParams: {
-        tokenId: id,
+        toAddress: "0x0b0691967454Dfe32662100614585AaB7d17AC32",
+        amount: 1
       },
     };
   }
+
+getNFTById(id) {
+  console.log("Getting NFT by ID");
+  return {
+    nftId: id,
+    priceInCents: this._getNftPrice(),
+    tokenUri: "https://tweed-demo.web.app/tweedNft.png",
+    fiatCurrencyId: "USD",
+    contractAddress: collectionsData[this.blockchainId].contractAddress,
+    chain: this.blockchainId,
+    title: "NFT_TITLE",
+    description: "NFT_DESCRIPTION",
+    abi: collectionsData[this.blockchainId].abi,
+    customMintParams: {
+      tokenId: id,
+    },
+  };
+}
 }
 
 module.exports = new NftService();
