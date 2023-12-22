@@ -1,5 +1,7 @@
 const collectionsData = {
   ethereumSepolia: {
+    tokenAddress: "0x3Ee449A38Ef7f51073df49Bc62c42Ab0DdF025df",
+    tokenAbi: "mint(toAddress address, amount uint256)",
     contractAddress: "0xfae681f31e7a89c195fa3b1d16af351b9facc5b8",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
