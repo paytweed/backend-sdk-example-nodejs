@@ -4,8 +4,8 @@ const nftService = require("./nft.service");
 class TweedService {
   async initialize() {
     this._client = await TweedBackendSDK.setup({
-      apiKey: "15cVDEv7E9saty6TRjmVoel78ibLXmdc",
-      apiSecret: "7NqjB6yVfULNDx-3Y06H5T51WQN7DSPvAA7c5pOIiU-oN9kxR1a5xpaOaM4PmYn1",
+      apiKey: "IcZ9nUMJKjolIpgKbc6OkkZdwHHJLJ6B",
+      apiSecret: "Le_rjSWd3QR4PauOw4nbEkOZ_ZnnbBUl0fUjLcsC5oV7i4-COJhJ6dXL8Nud7_60",
       defaultBlockchainIds: ["bnbTestnet"],
       callbacks: {
         getNftPurchaseData: async ({nftId}) => nftService.getNFTById(nftId),

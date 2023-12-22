@@ -17,28 +17,21 @@ class NftService {
     this.blockchainId = blockchainId;
   }
 
-  /**
-   * an example to an NFT checkout with the following mint function:
-   * safemint(toAddress address, tokenId uint256) payable public
-   * The abi should be taken from the compiled NFT contract
-   * The params should be populated in the customMintParams object
-   * There are two parameters that are getting populated from the frontend: toAddress and tokenURI
-   **/
   getTokenById(id) {
     console.log("Getting token by ID");
     return {
       tokenId: "1",
-      priceInCrypto: 40000000000000,
-      thumbnailPath: "https://tweed-demo.web.app/tweedNft.png",
+      priceInCrypto: 1000000000000000,
+      thumbnailPath: "https://png.pngtree.com/png-clipart/20230329/ourmid/pngtree-money-bag-cartoon-coins-png-image_6671982.png",
       fiatCurrencyId: "USD",
-      contractAddress: "0x9C574b99f2C13acEf98F3af329767eE16F18eC4F",
-      chain: "bnbTestnet",
-      title: "NFT_TITLE",
-      description: "NFT_DESCRIPTION",
-      abi: "TweedBuyTokensFor(toAddress address, amount uint256",
+      contractAddress: collectionsData[this.blockchainId].tokenAddress,
+      chain: this.blockchainId,
+      title: "TOKEN_TITLE",
+      description: "TOKEN_DESCRIPTION",
+      abi: collectionsData[this.blockchainId].tokenAbi,
       customMintParams: {
         toAddress: "0x0b0691967454Dfe32662100614585AaB7d17AC32",
-        amount: 1
+        amount: "1"
       },
     };
   }
