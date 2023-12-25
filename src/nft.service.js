@@ -27,7 +27,7 @@ class NftService {
   getById(id) {
     return {
       nftId: id,
-      priceInCents: this._getNftPrice(),
+      priceInCents: 0,
       tokenUri: "https://tweed-demo.web.app/tweedNft.png",
       fiatCurrencyId: "USD",
       contractAddress: collectionsData[this.blockchainId].contractAddress,

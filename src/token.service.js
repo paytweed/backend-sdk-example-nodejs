@@ -1,19 +1,29 @@
+const collectionsData = require("./constants/collections")
+
 class TokenService {
+  constructor(blockchainId = "ethereumSepolia") {
+    this.blockchainId = blockchainId;
+  }
+  
+  _setBlockchainId(blockchainId) {
+    this.blockchainId = blockchainId;
+  }
+
   getById(id) {
+    console.log(this.blockchainId)
     return {
       tokenId: id,
-      priceInCrypto: "1000000000000000000",
+      priceInCrypto: 1000000000000000,
+      thumbnailPath: "https://png.pngtree.com/png-clipart/20230329/ourmid/pngtree-money-bag-cartoon-coins-png-image_6671982.png",
       fiatCurrencyId: "USD",
-      thumbnailPath:
-        "https://static.wixstatic.com/media/0fe759_eed11ea2e1c240b1847f0cfa80b9290b~mv2.png/v1/fill/w_260,h_294,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/%D7%A1%D7%91%D7%AA%D7%90%20%D7%A4%D7%99%D7%91%D7%99.png",
-      contractAddress: "0x67a437d6ded3dc31C5AF7742eb4631907Fff79b9",
-      chain: "bnbTestnet",
-      title: "fibi token",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      abi: "mint(toAddress address, amount uint256)",
+      contractAddress: collectionsData[this.blockchainId].tokenAddress,
+      chain: this.blockchainId,
+      title: "TOKEN_TITLE",
+      description: "TOKEN_DESCRIPTION",
+      abi: collectionsData[this.blockchainId].tokenAbi,
       customMintParams: {
-        amount: "0",
+        toAddress: "0x0b0691967454Dfe32662100614585AaB7d17AC32",
+        amount: "1"
       },
     };
   }
