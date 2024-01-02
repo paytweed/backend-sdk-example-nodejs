@@ -18,11 +18,11 @@ class TokenService {
       fiatCurrencyId: "USD",
       contractAddress: collectionsData[this.blockchainId].tokenAddress,
       chain: this.blockchainId,
-      title: "TOKEN_TITLE",
-      description: "TOKEN_DESCRIPTION",
+      title: "Demo Token",
+      description: "This is a demo token",
       abi: collectionsData[this.blockchainId].tokenAbi,
       customMintParams: {
-        toAddress: "0x0b0691967454Dfe32662100614585AaB7d17AC32",
+        toAddress: "<WALLET_ADDRESS>",
         amount: "1"
       },
     };

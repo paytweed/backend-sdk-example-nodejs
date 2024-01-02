@@ -28,19 +28,19 @@ class NftService {
     return {
       nftId: id,
       priceInCents: 0,
+      //priceInCrypto: 0,
       tokenUri: "https://tweed-demo.web.app/tweedNft.png",
       fiatCurrencyId: "USD",
       contractAddress: collectionsData[this.blockchainId].contractAddress,
       chain: this.blockchainId,
-      title: "NFT_TITLE",
-      description: "NFT_DESCRIPTION",
-      // abi: "mint(toAddress address, tokenUri string)", //you have the option to use function signature of ABI or the longer version below
-      abi: collectionsData[this.blockchainId].abi,
+      title: "Demo NFT",
+      description: "This is a demo NFT",
+        abi: collectionsData[this.blockchainId].abi, 
       customMintParams: {
-        tokenId: id,
+        toAddress: "<WALLET_ADDRESS>",
+        tokenUri: "http://google.com"
       },
     };
   }
 }
-
 module.exports = new NftService();
