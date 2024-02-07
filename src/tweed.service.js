@@ -5,8 +5,9 @@ const tokenService = require("./token.service");
 class TweedService {
   async initialize() {
     this._client = await TweedBackendSDK.setup({
-      apiKey: "YOUR_API_KEY",
-      apiSecret: "YOUR_API_SECRET",
+      apiKey: "lTb8oCLxqtYb9plUrm08zrQxTMQozRXx",
+      apiSecret:
+        "4hlL4JLXLSD4MVNZHczebowo40pIqqD1TM5H94XLEvQbwFnfio-fqKQmZAJjIRmM",
       defaultBlockchainIds: ["ethereumSepolia"],
       callbacks: {
         getNftPurchaseData: async ({ nftId }) => nftService.getById(nftId),
