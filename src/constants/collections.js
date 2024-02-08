@@ -5,6 +5,10 @@ const collectionsData = {
     contractAddress: "0xfae681f31e7a89c195fa3b1d16af351b9facc5b8",
     abi: "safeMint(toAddress address, tokenUri string)",
   },
+  ethereum: {
+    contractAddress: "0x9c20c83863Dd76aA0708562e98589ad49DC830a7",
+    abi: "safeMint(toAddress address, tokenUri string)",
+  },
   polygonMumbai: {
     contractAddress: "0xebe81fd78bd43873bcd30cb7312b75468686cc4f",
     abi: "safeMint(toAddress address, tokenUri string)",

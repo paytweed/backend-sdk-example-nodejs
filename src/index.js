@@ -43,6 +43,7 @@ const main = async () => {
   app.listen(DEFAULT_PORT, () =>
     console.log(`App is listening on port ${DEFAULT_PORT}`)
   );
+
 };
 
 main();

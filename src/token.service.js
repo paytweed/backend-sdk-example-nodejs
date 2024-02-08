@@ -1,3 +1,4 @@
+const ethers = require("ethers")
 const collectionsData = require("./constants/collections")
 
 class TokenService {
@@ -13,7 +14,7 @@ class TokenService {
     console.log(this.blockchainId)
     return {
       tokenId: id,
-      priceInCrypto: 1000000000000000,
+      priceInCrypto: ethers.parseEther("0.01").toString(),
       thumbnailPath: "https://png.pngtree.com/png-clipart/20230329/ourmid/pngtree-money-bag-cartoon-coins-png-image_6671982.png",
       fiatCurrencyId: "USD",
       contractAddress: collectionsData[this.blockchainId].tokenAddress,

@@ -1,3 +1,4 @@
+const ethers = require("ethers")
 const collectionsData = require("./constants/collections")
 
 class NftService {
@@ -24,11 +25,13 @@ class NftService {
    * The params should be populated in the customMintParams object
    * There are two parameters that are getting populated from the frontend: toAddress and tokenURI
    **/
-  getById(id) {
+  getById(nftId) {
+    console.log(ethers.parseEther("0.001").toString())
+
     return {
-      nftId: id,
-      priceInCents: 0,
-      //priceInCrypto: 0,
+      nftId: nftId,
+      //priceInCents: 100000,
+      priceInCrypto: ethers.parseEther("0.01").toString(),
       tokenUri: "https://tweed-demo.web.app/tweedNft.png",
       fiatCurrencyId: "USD",
       contractAddress: collectionsData[this.blockchainId].contractAddress,
@@ -37,7 +40,7 @@ class NftService {
       description: "This is a demo NFT",
         abi: collectionsData[this.blockchainId].abi, 
       customMintParams: {
-        toAddress: "<WALLET_ADDRESS>",
+        //toAddress: toWalletAddress,
         tokenUri: "http://google.com"
       },
     };
